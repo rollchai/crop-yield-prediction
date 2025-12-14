@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import Topbar from "./components/Topbar";
+import Sidebar from "./components/Header"
 
 function HistoryPage() {
   const [history, setHistory] = useState([]);
@@ -9,7 +11,10 @@ function HistoryPage() {
   }, []);
 
   return (
+    <>
+    <Topbar/>
     <div style={styles.page}>
+      <Sidebar/>
       <div style={styles.card}>
         <h2 className="slide-left" style={styles.heading}>📊 Prediction History</h2>
 
@@ -77,6 +82,7 @@ function HistoryPage() {
         `}
       </style>
     </div>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ function Sidebar() {
   const location = useLocation();
 
   const links = [
-    { to: "/", label: "🏠 Home" },
+    { to: "/home", label: "🏠 Home" },
     { to: "/history", label: "📜 History" },
     { to: "/dashboard", label: "📈 Dashboard" },
     { to: "/schemes", label: "🌱 Schemes" },

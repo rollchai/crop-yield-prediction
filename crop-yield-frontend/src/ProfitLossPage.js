@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
 import { useNavigate } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Sidebar from "./components/Header"
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -75,6 +77,9 @@ function ProfitLossPage() {
   };
 
   return (
+    <>
+    <Topbar/>
+    <Sidebar/>
     <div
       style={{
         ...styles.container,
@@ -206,6 +211,7 @@ function ProfitLossPage() {
         </p>
       )}
     </div>
+    </>
   );
 }
 

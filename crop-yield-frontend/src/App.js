@@ -9,13 +9,15 @@ import DashboardPage from "./DashboardPage";
 import SchemesPage from "./SchemesPage";
 import ProfitLossPage from "./ProfitLossPage";
 import RewardPage from "./RewardPage";
+import Landing from "./Landing";
 function App() {
   return (
     <Router>
-      <Topbar/>
-      <Header />
+      {/* <Topbar/> */}
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<YieldForm />} />
+        <Route path="/" element={<Landing/>}/>
+        <Route path="/home" element={<YieldForm />} />
         <Route path="/result" element={<ResultPage />} />
         <Route path="/history" element={<HistoryPage />} />
        <Route path="/dashboard" element={<DashboardPage />} />

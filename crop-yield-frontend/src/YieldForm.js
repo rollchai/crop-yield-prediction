@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Sidebar from "./components/Header"
 
 function YieldForm() {
   const [formData, setFormData] = useState({
@@ -58,7 +60,10 @@ function YieldForm() {
   };
 
   return (
+     <>
+     <Topbar/>
     <div style={styles.page}>
+      <Sidebar/>
       <div style={styles.glassCard}>
         <h2 style={styles.title}>🌾 AI Crop Yield Predictor</h2>
 
@@ -151,6 +156,7 @@ function YieldForm() {
         {error && <p style={styles.error}>{error}</p>}
       </div>
     </div>
+     </>
   );
 }
 

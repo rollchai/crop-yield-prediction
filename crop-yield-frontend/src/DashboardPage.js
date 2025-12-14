@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./components/Header"; // import your sidebar
+import Topbar from "./components/Topbar";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -66,6 +67,8 @@ function DashboardPage() {
   };
 
   return (
+   <>
+   <Topbar/>
     <div style={{ display: "flex" }}>
       {/* Sidebar */}
       <Sidebar />
@@ -98,24 +101,13 @@ function DashboardPage() {
 
           {/* Buttons */}
           <div style={styles.buttonContainer}>
-            <button
-              onClick={() => navigate("/schemes")}
-              style={styles.btn}
-              className="hover-btn"
-            >
-              🌿 Government Schemes
-            </button>
-            <button
-              onClick={() => navigate("/profit-loss")}
-              style={styles.btn}
-              className="hover-btn"
-            >
-              💹 Profit–Loss Analysis
-            </button>
+            
+             
           </div>
         </div>
       </div>
     </div>
+   </>
   );
 }
 
@@ -182,3 +174,7 @@ const styles = {
 };
 
 export default DashboardPage;
+
+
+
+// src/DashboardPage.js

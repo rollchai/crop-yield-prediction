@@ -40,7 +40,7 @@ function ResultPage() {
       <div style={{ marginTop: "20px" }}>
         <button onClick={handleSave} style={btnStyle}>💾 Save to History</button>
         <button onClick={() => navigate("/history")} style={btnStyle}>📜 View History</button>
-        <button onClick={() => navigate("/")} style={btnStyle}>🔄 New Prediction</button>
+        <button onClick={() => navigate("/home")} style={btnStyle}>🔄 New Prediction</button>
       </div>
     </div>
   );

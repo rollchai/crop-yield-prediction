@@ -1,6 +1,8 @@
 // src/SchemesPage.js
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Sidebar from "./components/Header"
 
 function SchemesPage() {
   const navigate = useNavigate();
@@ -34,6 +36,9 @@ function SchemesPage() {
   ];
 
   return (
+    <>
+    <Topbar/>
+    <Sidebar/>
     <div style={container}>
       <h2 style={heading}>🌿 Government Schemes for Farmers</h2>
 
@@ -64,9 +69,7 @@ function SchemesPage() {
         ))}
       </div>
 
-      <button onClick={() => navigate("/dashboard")} style={btnStyle}>
-        ⬅ Back to Dashboard
-      </button>
+     
 
       {/* CSS Animations */}
       <style>
@@ -78,6 +81,7 @@ function SchemesPage() {
         `}
       </style>
     </div>
+    </>
   );
 }
 

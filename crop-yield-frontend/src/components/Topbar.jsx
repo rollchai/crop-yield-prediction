@@ -1,6 +1,16 @@
 import "./components.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Topbar() {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    // You can also clear auth data here if needed
+    // localStorage.clear();
+
+    navigate("/"); // redirect to home or login page
+  };
+
   return (
     <div className="topbar">
       <h3 className="heading">Welcome, Farmer 👨‍🌾</h3>
@@ -16,7 +26,9 @@ export default function Topbar() {
         <div className="profile-cloud">
           <h4>Sajid</h4>
           <p>Farmer</p>
-          <button className="logout-btn">Logout</button>
+          <button className="logout-btn" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       </div>
     </div>
